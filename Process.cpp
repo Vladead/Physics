@@ -1,4 +1,3 @@
-#include <cmath>
 
 //
 // Created by vladead on 12.04.19.
@@ -27,7 +26,7 @@ float Potential(Dot point_from_input, Dot plus_electrode, Dot minus_electrode) {
     //----------------------------------------------------------Вычисляет потенциал точки, на которую нажал пользователь
 
     const float delta_fi = 13.6; // Разность потенциалов электродов
-    const float electrode_radius = 0.15; // Радиус электрода //TODO уточнить радиус на опытной установке
+    const float electrode_radius = 0.015; // Радиус электрода //TODO уточнить радиус на опытной установке
     const float electrode_distance = 0.209; // Расстояние между электродами
 
     float fi = 0, r1 = 0, r2 = 0; // r1 - это расстояние от положительного электрода. Положительный - это левый
