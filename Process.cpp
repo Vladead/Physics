@@ -33,7 +33,7 @@ float Potential(Dot point_from_input, Dot plus_electrode, Dot minus_electrode) {
                                         // r2 - это расстояние от отрицательного электрода. Отрицательный - это правый
     r1 = Distance(plus_electrode, point_from_input);
     r2 = Distance(minus_electrode, point_from_input);
-    fi = delta_fi / (4 * std::log((electrode_distance - electrode_radius) / electrode_radius)) * ((r2 - r1) / r1 * r2);
+    fi = delta_fi / (4 * std::log((electrode_distance - electrode_radius) / electrode_radius)) * ((r2 - r1) / (r1*r2));
 
     return fi;
 }
