@@ -25,7 +25,14 @@ float Potential(Dot point_from_input, Dot plus_electrode, Dot minus_electrode) {
     // point_from_input - точка, на которую нажал пользователь
     //----------------------------------------------------------Вычисляет потенциал точки, на которую нажал пользователь
 
-    const float delta_fi = 13.6; // Разность потенциалов электродов
+    point_from_input.x = point_from_input.x * 10e-3;
+    point_from_input.y = point_from_input.y * 10e-3;
+    plus_electrode.x = plus_electrode.x * 10e-3;
+    plus_electrode.y = plus_electrode.y * 10e-3;
+    minus_electrode.x = minus_electrode.x * 10e-3;
+    minus_electrode.y = minus_electrode.y * 10e-3;
+
+    const float delta_fi = 13.16; // Разность потенциалов электродов
     const float electrode_radius = 0.015; // Радиус электрода //TODO уточнить радиус на опытной установке
     const float electrode_distance = 0.209; // Расстояние между электродами
 
